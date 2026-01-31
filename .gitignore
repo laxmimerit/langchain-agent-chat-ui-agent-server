@@ -221,3 +221,4 @@ nul
 *.db-shm
 *.db-wal
 vertex-ai.json
+.langgraph_api
