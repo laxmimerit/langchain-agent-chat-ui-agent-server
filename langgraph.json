@@ -1,7 +1,8 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "research": "./airbnb_mcp.py:agent"
+    "research": "./agents/airbnb_mcp.py:agent",
+    "personal": "./agents/personal_assistant.py:agent"
   },
   "env": ".env"
 }

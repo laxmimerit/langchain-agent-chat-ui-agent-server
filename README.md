@@ -153,3 +153,15 @@ langgraph dev --port 8080
 # Frontend on different port
 PORT=3001 yarn dev
 ```"# langchain-agent-server-template" 
+
+
+
+Setup
+
+uv python install 3.13
+uv venv --python 3.13
+uv sync
+uv sync --upgrade
+uv add -U "langgraph-cli[inmem]"
+uv add -U langgraph-api
+langgraph dev --allow-blocking
