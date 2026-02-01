@@ -9,7 +9,7 @@ from langchain.agents import create_agent
 
 
 # Initialize model
-model = ChatGoogleGenerativeAI(model='gemini-3-flash-preview')
+model = ChatGoogleGenerativeAI(model='gemini-2.5-flash')
 
 # Create the deep agent with memory and secure file backend
 agent = create_agent(
