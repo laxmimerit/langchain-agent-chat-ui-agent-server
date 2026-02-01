@@ -121,3 +121,14 @@ uv venv --python 3.13
 uv sync --upgrade
 uv add -U "langgraph-cli[inmem]"
 uv add -U langgraph-api
+
+### Deploy on AWS
+Gen AI Environment Setup (Windows): 
+- https://www.youtube.com/playlist?list=PLc2rvfiptPSQdX4jeLgW4nf5PId4j1msI
+
+Gen AI Environment Setup (MacOS/Linux):
+- https://www.youtube.com/playlist?list=PLc2rvfiptPSQVDu8nzUHb7FEkNCdU-E0o
+
+$200 AWS Free Credit Setup:
+- https://www.youtube.com/playlist?list=PLc2rvfiptPSRHHDk76XvdfQ3ilX5EnfoV
+
