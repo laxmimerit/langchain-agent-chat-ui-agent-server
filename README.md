@@ -1,3 +1,7 @@
+# WSL Setup on Windows
+Install WSL 2 in Windows 11 for Python Coding with VS Code
+- https://www.youtube.com/watch?v=MwxZ2hswZ6A
+
 # Environment Setup - Linux
 
 Complete setup for Langchain Agent Server on Ubuntu/Linux.
