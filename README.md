@@ -99,8 +99,8 @@ Get API keys from:
 ## 6. Clone and Setup Backend
 
 ```bash
-git clone https://github.com/laxmimerit/langchain-agent-server-template.git
-cd langchain-agent-server-template
+git clone https://github.com/laxmimerit/langchain-agent-chat-ui-template.git
+cd langchain-agent-chat-ui-template
 uv sync --upgrade
 ```
 
