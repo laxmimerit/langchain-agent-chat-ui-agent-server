@@ -1,12 +1,12 @@
-# Deep Research Environment Setup - Linux
+# Environment Setup - Linux
 
-Complete setup for LangGraph Deep Research on Ubuntu/Linux.
+Complete setup for Langchain Agent Server on Ubuntu/Linux.
 
 ## Prerequisites
 
 - Ubuntu 20.04+ or compatible Linux distribution
 - 8GB RAM minimum
-- 10GB free disk space
+- 100GB free disk space
 - Internet connection
 
 ## 1. Update System
@@ -85,7 +85,7 @@ LANGCHAIN_PROJECT="multi-agent-research"
 GOOGLE_API_KEY="your-google-key-here"
 OLLAMA_API_KEY="your-ollama-key-here"
 WEATHER_API_KEY="your-weather-key-here"
-QDRANT_API_KEY="your-qdrant-key-here"
+OPENAI_API_KEY="your-opneai-keys"
 ```
 
 Get API keys from:
@@ -95,55 +95,17 @@ Get API keys from:
 ## 6. Clone and Setup Backend
 
 ```bash
-git clone https://github.com/laxmimerit/deep-finance-research.git
-cd deep-finance-research
-uv sync
+git clone https://github.com/laxmimerit/langchain-agent-server-template.git
+cd langchain-agent-server-template
+uv sync --upgrade
 ```
 
 Start LangGraph server:
 ```bash
-langgraph dev
+langgraph dev --host 0.0.0.0 --allow-blocking
 ```
 
 Server runs on http://localhost:2024
-
-## 7. Setup UI (New Terminal)
-
-```bash
-git clone https://github.com/langchain-ai/deep-agents-ui.git
-cd deep-agents-ui
-yarn install
-yarn dev
-```
-
-UI available at http://localhost:3000
-
-## Quick Start Commands
-
-Terminal 1 (Backend):
-```bash
-cd ~/deep-finance-research
-langgraph dev
-```
-
-Terminal 2 (Frontend):
-```bash
-cd ~/deep-agents-ui
-yarn dev
-```
-
-## Troubleshooting
-
-**Permission errors with uv:**
-```bash
-sudo chown -R $USER ~/.local/share/uv
-```
-
-**Node version issues:**
-```bash
-nvm install --lts
-nvm use --lts
-```
 
 **Port conflicts:**
 ```bash
@@ -156,12 +118,10 @@ PORT=3001 yarn dev
 
 
 
-Setup
+#### Lib Setup
 
 uv python install 3.13
 uv venv --python 3.13
-uv sync
 uv sync --upgrade
 uv add -U "langgraph-cli[inmem]"
 uv add -U langgraph-api
-langgraph dev --allow-blocking
