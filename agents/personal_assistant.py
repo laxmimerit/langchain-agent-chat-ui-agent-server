@@ -4,6 +4,7 @@
 import sys
 import os
 os.environ["BG_JOB_ISOLATED_LOOPS"] = "true"
+os.environ["WATCHFILES_FORCE_POLLING"]="false"
 
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_dir)
@@ -22,10 +23,13 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 import asyncio
 
 # model = ChatGoogleGenerativeAI(model="gemini-3-flash-preview")
-model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
+# model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
+
+from langchain_openai import ChatOpenAI
+model = ChatOpenAI(model='gpt-5-mini')
 
 async def get_tools():
-    mcp_config = utils.load_mcp_config("yahoo-finance", "gmail", "google-sheet")
+    mcp_config = utils.load_mcp_config("yahoo-finance", "gmail", "google-sheets")
     # mcp_config = utils.load_mcp_config()
     # print("mcp config loaded:", mcp_config)
 
