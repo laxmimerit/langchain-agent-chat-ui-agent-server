@@ -146,4 +146,4 @@ $200 AWS Free Credit Setup:
 
 ### Note
 ### SSH
-- ssh -i "~/.ssh/ai-agent-projects.pem" ubuntu@ec2-3-91-185-191.compute-1.amazonaws.com#
+- ssh -i "~/.ssh/ai-agent-projects.pem" ubuntu@ec2-3-91-185-191.compute-1.amazonaws.com

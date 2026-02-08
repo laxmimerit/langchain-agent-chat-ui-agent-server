@@ -222,3 +222,4 @@ nul
 *.db-wal
 vertex-ai.json
 .langgraph_api
+.vscode
